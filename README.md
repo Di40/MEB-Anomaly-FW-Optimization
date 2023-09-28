@@ -1,14 +1,14 @@
 # Minimum Enclosing Ball for Anomaly Detection using variants of Frank-Wolfe
 
 ## Table of contents
-* [General Info](#general-info)
-* [Group Members](#group-members)
-* [Project Structure](#project-structure)
+* [General info](#general-info)
+* [Team members](#team-members)
+* [Project structure](#project-structure)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Contributing](#contributing)
 
-## General Info
+## General info
 This is the final project for the "Optimization for Data Science" course at the University of Padova.\
 This repository contains the code, [report](./documents/Report%20and%20Presentation/Report.pdf), [presentation](./documents/Report%20and%20Presentation/Presentation.pdf) and some [extra materials](https://github.com/Di40/MEB_FrankWolfe_Optimization/tree/main/documents).
 
@@ -19,12 +19,14 @@ This repository contains the code, [report](./documents/Report%20and%20Presentat
 4. Implement the (1+ε)-approximation to MEB algorithm from [Yildirim, 2008](https://github.com/Di40/MEB_FrankWolfe_Optimization/blob/main/documents/Papers%20with%20notes/(3)%20Yildirim%2C%202008.pdf).
 5. Apply the MEB approach for anomaly detection (locate new points that are out of the MEB) on two real-world [datasets](https://github.com/Di40/MEB_FrankWolfe_Optimization/tree/main/datasets).
 
-## Group Members:
+## Team members:
 - Dejan Dichoski
 - [Marija Cveevska](https://github.com/marijacveevska)
 - [Suleyman Erim](https://github.com/suleymanerim1)
 
-## Project Structure
+We utilized PyCharm for development and GitHub for version control.
+
+## Project structure
 ```bash
 ├───configs
 ├───datasets
