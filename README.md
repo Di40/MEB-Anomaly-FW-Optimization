@@ -1,61 +1,48 @@
-# Minimum Enclosing Ball and Anomaly Detection using variants of Frank-Wolfe
+# Minimum Enclosing Ball for Anomaly Detection using variants of Frank-Wolfe
 
 ## Table of contents
-* [General Info](#General-Info)
-* [Group Members](#Group-Members)
-* [Project Structure](#Project-Structure)
-* [Setup](#Setup)
-* [Run](#Run)
+* [General Info](#general-info)
+* [Group Members](#group-members)
+* [Project Structure](#project-structure)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Contributing](#contributing)
 
 ## General Info
-This is a final project for Optimization for Data Science course in University of Padua.
+This is the final project for the "Optimization for Data Science" course at the University of Padova.\
+This repository contains the code, [report](./documents/Report%and%Presentation/Report.pdf), [presentation](./documents/Report%and%Presentation/Presentation.pdf) and some [extra materials](https://github.com/Di40/MEB_FrankWolfe_Optimization/tree/main/documents).
 
 ### Task
-Minimum Enclosing Ball and Anomaly Detection
-- analyze in depth the papers and the theoretical results
-- implement the Away-Step Frank Wolfe [Lacoste-Julien et al]
-- implement PFW algorithm described in [Tsuji et al., Algorithm 1]
-- implement the first algorithm in the paper [Yildirim, 2008].
-- choose two datasets and use the MEB defined over them to find anomalies (new points that are out of the MEB)
+1. Analyze in-depth [four papers](https://github.com/Di40/MEB_FrankWolfe_Optimization/tree/main/documents/Papers%20with%20notes) and their theoretical results.
+2. Implement the Away-Steps Frank-Wolfe algorithm from [Lacoste-Julien et al., 2015](./docs/Papers%20with%20notes/(1)%Lacoste-Julien%and%Jaggi,%2015.pdf).
+3. Implement the Blended Pairwise Conditional Gradients (BPCG) algorithm from [Tsuji et. al., 2022](./documents/Papers%20with%20notes/(2)%Tsuji%et%al.,%2022.pdf).
+4. Implement the (1+ε)-approximation to MEB algorithm from [Yildirim, 2008](./documentsPapers%20with%20notes/(3)%Yildirim,%2008.pdf).
+5. Apply the MEB approach for anomaly detection (locate new points that are out of the MEB) on two real-world [datasets](https://github.com/Di40/MEB_FrankWolfe_Optimization/tree/main/datasets).
 
 ## Group Members:
 - Dejan Dichoski
-- Marija Cveevska
-- Suleyman Erim
+- [Marija Cveevska](https://github.com/marijacveevska)
+- [Suleyman Erim](https://github.com/suleymanerim1)
 
 ## Project Structure
 ```bash
-├── configurations
-│   ├── experiment1_Uniform
-│   ├── experiment2_Gaussian
-│   ├── experiment6_CustomerChurn
-│   ├── experiment9_BreastCancer
-├── datasets
-│   ├── CustomerChurn
-│   └── BreastCancer
-├── runs (results will be saved here)
-│   ├── graphs
-│   ├── output.yaml
-│   └── log files
-├── papers
-│   ├── Lacoste_Julien et al.
-│   ├── Tsuji et al.
-│   ├── Yıldırım
-├── src (source codes)
-│   ├── FrankWolfeVariants.py
+├───configs
+├───datasets
+├───documents
+│   ├───Extra papers
+│   ├───Extra theory
+│   ├───Papers with notes
+│   └───Report and Presentation
+└───src
 │   ├── data_generation.py
 │   ├── execution.py
+│   ├── FrankWolfeVariants.py
 │   ├── logger.py
 │   ├── plotting.py
 │   ├── utils.py
-│   └── partials/template
 ├── main.py
 ├── setup.py
-├── requirements.txt
-├── Report.pdf
-├── Presentation.pptx
-├── README.md
-└── .gitignore
+└── requirements.txt
 ```
 
 ## Setup
@@ -64,18 +51,17 @@ $ conda update conda -y
 $ conda create -p venv python==3.10 -y
 $ conda activate venv/
 ```
-Go to  requirements.txt file and uncomment symbol (#) before "-e ."
-Then,
+Go to the requirements.txt file and uncomment the symbol (#) before "-e .". Then:
 ```
 $ pip install -r requirements.txt
 ```
 
-## Run
-Choose a configuration file(.yaml) to run an experiment
-configs/"experiment.yaml"
+## Usage
+Choose a configuration file (.yaml) to run an experiment from the configs folder. For example:
 ```
-$ python main.py --cfg "exp0_Default.yaml"
+$ python main.py --cfg "exp6_CustomerChurn.yaml"
 ```
-Results will be saved in runs/experiment folder
+The results will be saved to the runs/experiment folder.
 
-
+## Contributing
+We invite you to explore our analysis, learn from our findings, and adapt our methodologies to your own projects. Your feedback and contributions are highly valued!
