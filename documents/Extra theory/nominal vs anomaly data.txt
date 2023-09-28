@@ -1,0 +1,5 @@
+TP: Anomaly point correctly classified as anomaly
+FN: Anomaly point wrongly classified as nominal
+
+TN: Nominal point (MEB) correctly classified as nominal
+FP: Nominal point wrongly classified as anomaly

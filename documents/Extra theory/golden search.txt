@@ -1,0 +1,20 @@
+We will generate intervals which are smaller and smaller such that all of them contain the optimal solution. And we'll do it in a way that minimzies the computational effort: we would like at each iteration to calculate only once the objective function. This is called the golden section method.
+
+Assumptions:
+f: R^n -> R, xk e R^n, dk e R^n, grad f(xk)^Tdk<0
+We are trying to minimize an objective function f of n variables. We are at a current iterate xk. And we have calculated the direction dk (descent direction). This means that the directional derivative derivatife of f along d is strictly negative.
+
+Unidimensional problem:
+> h(alpha) = f(xk + alpha*dk)
+The problem that we have to solve is the calculation of the step along dk, which is a unidimensional problem. We have a function h(alpha), and here we will assume that the function h is strictly unimodal in a given interval [0, T]. This means that the function has a unique minimum alpha*. On the left of alpha* the function is decreasing, and on the right is increasing. And we will exploit this property to obtain alpha* or an approximation of it.
+
+The main idea is to define a sequence of intervals which are nested in each other. And the optimal solution belongs to each of these intervals.
+At each iteration k:
+> [l_k+1, u_k+1] subset of [l_k, u_k]
+> alpha* e [l_k, u_k]
+
+We use the golden ratio for this:
+https://www.youtube.com/watch?v=6NYp3td3cjU
+
+Problem: When strict-unimodality holds?
+Proving unimodality is often hard. If it does not hold, the method will converge to one of the local optima.
